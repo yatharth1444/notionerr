@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
-import { ChevronRight, ChevronDown, File, Folder, Plus, FileText, Grid, Trello } from 'lucide-react'
+import { ChevronRight, ChevronDown, File, Folder, FileText, Grid, Trello } from 'lucide-react'
 import { Spreadsheet } from './Spreadsheet'
 import { KanbanBoard } from './KanbanBoard'
 
