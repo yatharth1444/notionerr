@@ -5,7 +5,7 @@ import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import { ChevronRight, ChevronDown, File, Folder, FileText, Grid, Trello } from 'lucide-react'
 import { Spreadsheet } from './Spreadsheet'
-import { KanbanBoard } from './KanbanBoard'
+import { KanbanBoard, type KanbanColumn } from './KanbanBoard'
 
 // Update the NoteItem type to include noteType
 type NoteItem = {
@@ -134,7 +134,7 @@ export function NotionCloneComponent() {
 
     setNewItemName('');
     if (type === 'folder') {
-      setExpandedFolders((prev) => new Set([...prev, selectedNote as string]));
+      setExpandedFolders((prev) => new Set([...Array.from(prev), selectedNote as string]));
     } else {
       selectItem(newItem.id);
     }

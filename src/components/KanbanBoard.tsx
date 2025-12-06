@@ -5,7 +5,7 @@ interface KanbanCard {
   content: string;
 }
 
-interface KanbanColumn {
+ export interface KanbanColumn {
   id: string;
   title: string;
   cards: KanbanCard[];
